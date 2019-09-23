@@ -1,0 +1,291 @@
+@font-face { 
+    font-family: 'ON-IGothic'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eleven@1.0/ON-IGothic.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+* {
+    font-family: 'ON-IGothic';
+}
+
+body {
+    width: 1200px;
+    height: 2200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    min-width: 1200px;
+    height: 140px;
+    margin: 0 auto;
+    z-index: 999999;
+    background: white;
+}
+
+.header-top-nav {
+    height: 28px;
+}
+
+.header-top-right {
+    margin: 0;
+    padding-left: 0;
+    height: 100%;
+    font-size: 14px;
+    float: right;
+    overflow: hidden;
+}
+
+.header-top-right>li {
+    margin-right: 40px;
+    margin-top: 5px;
+    list-style: none;
+    float: right;
+    cursor: pointer;
+}
+
+.header-main {
+    position: relative;
+    width: 100%;
+    height: 49px;
+}
+
+.header-logo {
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.header-logo>img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-top-right>li:hover {
+    color: red;
+}
+
+.nav {
+    width: 100%;
+    height: 37.8px;
+}
+
+.nav-bar {
+    padding-left: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 50%;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-bar>li {
+    font-size: 18px;
+    width: 130px;
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+}
+
+.nav-bar>li:hover {
+    color: red;
+}
+
+.line-notice-wrap {
+    background-color: #e0e0e0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.line-notice-wrap>a {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    line-height: 25.19px;
+}
+
+.main-section {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 80px;
+    width: 1200px;
+}
+
+.main-jumbotron {
+    position: relative;
+    height: 550px;
+    background-image: url("../images/main-jumbotron.png");
+    background-size: cover;
+}
+
+.dropdown.sel-location {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    top: 320px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.dropdown.sel-date {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    top: 370px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.btn-search.search-main {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: gray;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 420px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+
+.sub-section {
+    height: 120px;
+    width: 100%;
+    background-color: #3e3e3e;
+    position: relative;
+}
+
+.sub-section>input {
+    height: 35px;
+    width: 250px;
+    border-radius: 3px;
+    border: none;
+    padding-left: 10px;
+    position: absolute;
+    top: 43px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn-search-shop {
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: gray;
+    position: absolute;
+    top: 43px;
+    right: 200px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+
+.main-article {
+    height: 700px;
+    width: 100%;
+    background-color: bisque;
+}
+
+.main-ad-left {
+    height: 260px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    background: #bababa;
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+.main-ad-right {
+    height: 260px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    background: #3498db;
+    display: inline-block;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-left {
+    height: 80%;
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+.footer-left>img {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+}
+
+.footer-info {
+    height: 80%;
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+.footer-info>div {
+    position: relative;
+    display: inline-block;
+    top: 15px;
+}
+
+#footer-info1, #footer-info2, #footer-info3 {
+    cursor: pointer;
+}
+
+#footer-info1:hover,
+#footer-info2:hover,
+#footer-info3:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+}
