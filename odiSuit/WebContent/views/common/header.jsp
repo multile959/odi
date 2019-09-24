@@ -1,6 +1,8 @@
+<%@page import="member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	Member loginMem = (Member)session.getAttribute("loginMem");
 	String message = (String)session.getAttribute("msg");
 %>
 <!DOCTYPE html>
@@ -15,14 +17,18 @@
         
         <div class="header-top-nav">
             <ul class="header-top-right">
-                <li>고객센터</li>
-                <li>로그인</li>
+               	<li>고객센터</li>
+                <% if (loginMem == null) { %>
+                	<li onclick="login();">로그인</li>
+                <% } else { %>
+                	<li onclick="logout();">로그아웃</li>
+                <% } %>
             </ul>
         </div>
         
         <div class="header-main">
             <div class="header-logo">
-                <img src="<%= request.getContextPath() %>/resources/images/logo.png" alt="" onclick="location.href='<%= request.getContextPath() %>'">
+                <img src="<%= request.getContextPath() %>/resources/images/main-logo.png" alt="" onclick="location.href='<%= request.getContextPath() %>'">
             </div>
         </div>
         
@@ -30,7 +36,7 @@
             <ul class="nav-bar">
                 <li>정장대여</li>
                 <li>커뮤니티</li>
-                <li>마이페이지</li>
+                <li onclick="myPage();">마이페이지</li>
                 <li>매장찾기</li>
             </ul>
         </div>
@@ -44,6 +50,16 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
+    
+		$(function(){
+			var msg = "<%= message %>";
+			if(msg != "null"){
+				alert(msg);
+				<% session.removeAttribute("msg");%>
+			}
+		
+		});
+		
         var flag = 0;
 
         $(window).scroll(function(){
@@ -59,6 +75,18 @@
                 $(".line-notice-wrap").stop().animate({'height':'18%'},{queue:false, duration:300});
             }
         })
+        
+        function login(){
+            location.href = "<%= request.getContextPath() %>/views/common/login.jsp";
+        }
+
+        function logout(){
+            location.href = "<%= request.getContextPath() %>/logout.me";
+        }
+        
+        function myPage(){
+            location.href = "<%= request.getContextPath() %>/views/user/myPage.jsp";
+        }
     </script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 	<%@ include file="views/common/header.jsp" %>
 	<!-- MAIN PAGE -->
     <div class="main-section">
-
+		
         <section class="main-jumbotron">
             <div class="dropdown sel-location">
 
@@ -45,5 +45,6 @@
         </section>
 
     </div>
+	<%@ include file="views/common/footer.jsp" %>
 </body>
 </html>
