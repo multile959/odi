@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <%@ include file="../common/header.jsp" %>
-   	<div style="height: 140px;"></div>
-   	
+
 	<div align="center">
         <h1>예약번호 상품이름</h1>
         
@@ -70,6 +68,5 @@
         </form>
         
     </div>
-    <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

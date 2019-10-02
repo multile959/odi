@@ -89,26 +89,26 @@
             #cnt-review-table td{
                 height:80px;
             }
-
+			
+			#ctg-myReview-btn label{
+				color:black;
+				font-size:20px;
+			}
+			
+			.review-tb-content:hover{
+				color:blue;
+				cursor:pointer;
+				background:rgb(250,250,250);
+			}
     </style>
 </head>
-<body>
-    <%@ include file="../common/header.jsp" %>
-   	<div style="height: 140px;"></div>
-   	
-    <div id="outer">
-        <h4 id="header" align="center" style="font-size:30px;">정장대여&nbsp;&nbsp;커뮤니티&nbsp;&nbsp;점포검색&nbsp;&nbsp;마이페이지</h4>
-        <hr>
-        
+<body style="height: auto;">
+   <%@ include file = "../common/header.jsp"%>        
+   <br><br><br><br><br><br><br><br>
+
         <!-- 바디 : 중간부분(변경되는부분) -->
        <div id="body">
-            <div id="myPage-category">
-                <div id="ctg-myPage-btn">마이페이지</div>
-                <div id="ctg-editInfo-btn">정보수정</div>
-                <div id="ctg-reserve-btn">예약내역</div>
-                <div id="ctg-myReview-btn">마이리뷰</div>
-                <div id="ctg-myPick-btn">찜한 목록</div>
-            </div>
+            <%@ include file = "myPageCategory.jsp" %>
 
             <div id="myPage-content">
                 <form action="">
@@ -126,38 +126,38 @@
                                 <th>제목(댓글개수)</th>
                                 <th>썸네일</th>
                             </tr>
-                            <tr>
+                            <tr class="review-tb-content">
                                 <td>1</td>
                                 <td>2019-09-20</td>
                                 <td>완전좋아요(1)</td>
                                 <td><img src="img/profileimg.png"></td>
                             </tr>
-                            <tr>
+                            <tr class="review-tb-content">
                                 <td>2</td>
                                 <td>2019-09-20</td>
                                 <td>완전좋아요(1)</td>
                                 <td><img src="img/profileimg.png"></td>
                             </tr>
                             
-                            <tr>
+                            <tr class="review-tb-content">
                                 <td>3</td>
                                 <td>2019-09-20</td>
                                 <td>완전좋아요(1)</td>
                                 <td><img src="img/profileimg.png"></td>
                             </tr>
-                            <tr>
+                            <tr class="review-tb-content">
                                 <td>4</td>
                                 <td>2019-09-20</td>
                                 <td>완전좋아요(1)</td>
                                 <td><img src="img/profileimg.png"></td>
                             </tr>
                         </table>
+                        <div align="center">페이징작업</div>
                     </div>
                 </form>
             </div>
 
         </div>
-    </div>
 	<%@ include file="../common/footer.jsp" %> 
 
 </body>

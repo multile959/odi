@@ -11,8 +11,10 @@
 
 body {
     width: 1200px;
-    height: 2200px;
-    margin: 0 auto;
+    height:auto;
+    margin-right: auto;
+    margin-left:auto;
+    maring:0;
     padding: 0;
     position: relative;
 }

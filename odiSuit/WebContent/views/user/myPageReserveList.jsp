@@ -6,16 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
-            @font-face { 
-               font-family: 'ON-IGothic'; 
-               src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eleven@1.0/ON-IGothic.woff') format('woff'); 
-               font-weight: normal; 
-               font-style: normal; 
-           }
-            
-            *{
-                font-family: 'ON-IGothic';
-            }
+	
 
             #outer{
                 margin-left:auto;
@@ -116,27 +107,28 @@
                 float:right;
                 display:inline-block;
             }
-
-
+			
+			#ctg-reserve-btn label{
+				color:black;
+				font-size:20px;
+			}
+			.reserve-tb-content:hover{
+				color:blue;
+				cursor:pointer;
+				background:rgb(250,250,250);
+			}
     </style>
 </head>
-<body>
-    <%@ include file="../common/header.jsp" %>
-   	<div style="height: 140px;"></div>
+<body style="height: auto;">
+     <%@ include file = "../common/header.jsp"%>        
+   <br><br><br><br><br><br><br><br>
    	
     <div id="outer">
-        <h4 id="header" align="center" style="font-size:30px;">정장대여&nbsp;&nbsp;커뮤니티&nbsp;&nbsp;점포검색&nbsp;&nbsp;마이페이지</h4>
-        <hr>
+      
         
         <!-- 바디 : 중간부분(변경되는부분) -->
        <div id="body">
-            <div id="myPage-category">
-                <div id="ctg-myPage-btn">마이페이지</div>
-                <div id="ctg-editInfo-btn">정보수정</div>
-                <div id="ctg-reserve-btn">예약내역</div>
-                <div id="ctg-myReview-btn">마이리뷰</div>
-                <div id="ctg-myPick-btn">찜한 목록</div>
-            </div>
+            <%@ include file = "myPageCategory.jsp" %>
 
             <div id="myPage-content">
                     <div id="cnt-reserve-list">
@@ -150,25 +142,25 @@
                                     <th width="400">예약시간</th>
                                     <th width="100">상태</th>
                                 </tr>
-                                <tr>
+                                <tr class="reserve-tb-content">
                                     <td>105</td>
                                     <td>네이비 스트레치 솔리드 ..</td>
                                     <td>2019-09-11/10:00~13:00</td>
                                     <td>반납완료</td>
                                 </tr>
-                                <tr>
+                                <tr class="reserve-tb-content">
                                     <td>105</td>
                                     <td>네이비 스트레치 솔리드 ..</td>
                                     <td>2019-09-11/10:00~13:00</td>
                                     <td>반납완료</td>
                                 </tr>
-                                <tr>
+                                <tr class="reserve-tb-content">
                                     <td>105</td>
                                     <td>네이비 스트레치 솔리드 ..</td>
                                     <td>2019-09-11/10:00~13:00</td>
                                     <td>반납완료</td>
                                 </tr>
-                                <tr>
+                                <tr class="reserve-tb-content">
                                     <td>105</td>
                                     <td>네이비 스트레치 솔리드 ..</td>
                                     <td>2019-09-11/10:00~13:00</td>
@@ -189,7 +181,7 @@
                             <table id="cnt-reserve-detail-tb">
                                 <tr>
                                     <td rowspan="8" id="imgTable">
-                                        <img src="img/profileimg.png" alt="">
+                                        <img src="../../resources/images/suitImg.png" alt="">
                                     </td>
                                     <th>예약번호 값</th>
                                     <td>상품명 값</td>
@@ -239,6 +231,7 @@
             </div>
 
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
     <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

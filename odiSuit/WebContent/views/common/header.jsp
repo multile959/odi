@@ -17,7 +17,7 @@
         
         <div class="header-top-nav">
             <ul class="header-top-right">
-               	<li>고객센터</li>
+               	<li onclick="service();">고객센터</li>
                 <% if (loginMem == null) { %>
                 	<li onclick="login();">로그인</li>
                 <% } else { %>
@@ -84,9 +84,15 @@
             location.href = "<%= request.getContextPath() %>/logout.me";
         }
         
-        function myPage(){
-            location.href = "<%= request.getContextPath() %>/views/user/myPage.jsp";
+        function service(){
+        	location.href = "<%= request.getContextPath() %>/views/user/userServiceCenter.jsp";
         }
+        
+        function myPage(){
+            location.href = "<%= request.getContextPath() %>/views/user/myPageEditInfo.jsp";
+        }
+        
+        
     </script>
 </body>
 </html>

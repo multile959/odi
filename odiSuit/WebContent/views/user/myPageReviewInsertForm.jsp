@@ -71,26 +71,20 @@
             #cnt-review-btn-submit{
                 float:right;
             }
-
+			
+			#ctg-myReview-btn label{
+				color:black;
+				font-size:20px;
+			}
     </style>
 </head>
-<body>
-    <%@ include file="../common/header.jsp" %>
-   	<div style="height: 140px;"></div>
-   	
-    <div id="outer">
-        <h4 id="header" align="center" style="font-size:30px;">정장대여&nbsp;&nbsp;커뮤니티&nbsp;&nbsp;점포검색&nbsp;&nbsp;마이페이지</h4>
-        <hr>
-        
+<body style="height: auto;">
+   <%@ include file = "../common/header.jsp"%>        
+   <br><br><br><br><br><br><br><br>
+
         <!-- 바디 : 중간부분(변경되는부분) -->
        <div id="body">
-            <div id="myPage-category">
-                <div id="ctg-myPage-btn">마이페이지</div>
-                <div id="ctg-editInfo-btn">정보수정</div>
-                <div id="ctg-reserve-btn">예약내역</div>
-                <div id="ctg-myReview-btn">마이리뷰</div>
-                <div id="ctg-myPick-btn">찜한 목록</div>
-            </div>
+            <%@ include file = "myPageCategory.jsp" %>
 
             <div id="myPage-content">
                 <h2>리뷰작성</h2>
