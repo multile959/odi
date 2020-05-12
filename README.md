@@ -3,5 +3,5 @@
 ### team project 2
 > 면접용 정장 대여 중개 사이트
 
-### 기반
-> JSP, Servlet
+### 사용언어
+> Java, javascript, html5/css
